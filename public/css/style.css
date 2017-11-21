@@ -134,12 +134,14 @@
 	font-size: 1.5em;	
 }
 /* slide show slogan */
+.hero-img {
+	max-height: 540px;
+}
 .mySlides {
 	display: none;
 	margin: 0 auto;
 	max-width: 100%;
 	opacity: 0.8;
-	height: 580px;
 }
 .bg-primary {
 	background: #e74c3c;
