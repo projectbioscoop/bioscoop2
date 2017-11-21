@@ -1,1 +1,1 @@
-bioscoop2
+bioscoop
