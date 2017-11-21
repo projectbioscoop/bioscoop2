@@ -29,18 +29,7 @@
 		      <li class="nav-item">
 		        <a class="nav-link" href="#">About</a>
 		      </li>
-          <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="download">Lux <span class="caret"></span></a>
-              <div class="dropdown-menu" aria-labelledby="download">
-                <a class="dropdown-item" href="https://jsfiddle.net/bootswatch/8zet8yhz/">Open in JSFiddle</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="../4/lux/bootstrap.min.css">bootstrap.min.css</a>
-                <a class="dropdown-item" href="../4/lux/bootstrap.css">bootstrap.css</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="../4/lux/_variables.scss">_variables.scss</a>
-                <a class="dropdown-item" href="../4/lux/_bootswatch.scss">_bootswatch.scss</a>
-              </div>
-            </li>
+          
 		    </ul>
 		    <form class="form-inline my-2 my-lg-0">
 		      <input class="form-control mr-sm-2" type="text" placeholder="Search">
