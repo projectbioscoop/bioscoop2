@@ -48,7 +48,7 @@
 		    </form>
 		  </div>
 		</nav>
-	</header>
+	{{--</header>--}}
 	
 	<div class="container">
 		@yield('content')
