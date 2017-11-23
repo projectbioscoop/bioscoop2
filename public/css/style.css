@@ -146,3 +146,13 @@
 .bg-primary {
 	background: #e74c3c;
 }
+
+.titel {
+	margin: 25px 0 25px 0;
+}
+
+.scroll {
+	overflow-y: auto;
+	max-height: 484px;
+	margin-bottom: 25px;
+}
