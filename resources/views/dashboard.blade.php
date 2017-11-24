@@ -11,4 +11,4 @@
 
 @section('content')
 
-@endsection('content')
+@endsection
