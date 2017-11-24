@@ -146,6 +146,39 @@
 .bg-primary {
 	background: #e74c3c;
 }
+.dropdown-toggle:hover + .dropdown-menu { 
+  display: block; 
+} 
+ 
+.dropdown-menu:hover { 
+  display: block; 
+} 
+ 
+.navbar { 
+  margin-bottom: 0; 
+  border-radius: 0; 
+} 
+.row {
+	margin-top: 20px;
+}
+
+
+
+
+
+.dropdown-toggle:hover + .dropdown-menu {
+	display: block;
+}
+
+.dropdown-menu:hover {
+	display: block;
+}
+
+.navbar {
+	margin-bottom: 0;
+	border-radius: 0;
+}
+
 
 .titel {
 	margin: 25px 0 25px 0;

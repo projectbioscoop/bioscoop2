@@ -2,8 +2,9 @@
 
 @section('content')
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-8 col-md-offset-4">
             <div class="panel panel-default">
+                <div class="center">
                 <div class="panel-heading" style="padding-left: 15px;">Login</div>
 
                 <div class="panel-body">
@@ -63,5 +64,6 @@
                 </div>
             </div>
         </div>
+    </div>
     </div>
 @endsection
