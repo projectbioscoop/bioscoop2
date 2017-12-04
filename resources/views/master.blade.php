@@ -46,11 +46,15 @@
     </header> 
 	
     <div class="globalWrapper">
-        <div class="sesionLeft"></div>
+        <div class="sesionLeft">
+            @yield('LeftBar')
+        </div>
         <div class="container">
             @yield('content')
         </div>
-        <div class="sesionRight"></div>
+        <div class="sesionRight">
+            @yield('RightBar')
+        </div>
     </div>
 
 	
