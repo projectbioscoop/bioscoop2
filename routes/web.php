@@ -15,7 +15,7 @@
 Route::group(['middleware'=>'auth'], function(){
 
     Route::get('/chairselect', function (){
-        return view('ChairSelect');
+        return view('Select_chair.ChairSelect');
     });
 
 });
