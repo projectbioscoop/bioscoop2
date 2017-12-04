@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUsersTable extends Migration
+class CreateTblTijdenTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,8 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('tbl_tijden', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('voornaam');
-            $table->string('achternaam');
-            $table->string('tussenVoegsel');
-            $table->string('email')->unique();
-            $table->string('password');
-            $table->string('geslacht');
-
-            $table->rememberToken();
             $table->timestamps();
         });
     }
@@ -34,6 +26,6 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('tbl_tijden');
     }
 }
