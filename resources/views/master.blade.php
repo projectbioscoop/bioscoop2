@@ -44,9 +44,15 @@
         </nav> 
     </header> 
 	
-	<div class="container">
-		@yield('content')
-	</div>
+    <div class="globalWrapper">
+        <div class="sesionLeft"></div>
+        <div class="container">
+            @yield('content')
+        </div>
+        <div class="sesionRight"></div>
+    </div>
+
+	
 
 	<div class="hero-img">
 		@yield('hero-content')
