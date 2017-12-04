@@ -1,0 +1,14 @@
+h2 {
+    color: hotpink;
+}
+.seats {
+    margin-top: 20px;
+    padding-bottom: 500px;
+    background-color: hotpink;
+    margin-bottom: 20px;
+}
+.scherm {
+    padding-bottom: 100px;
+    transform: rotate(180deg);
+    margin-bottom: 20px;
+}
