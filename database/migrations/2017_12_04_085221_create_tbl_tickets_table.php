@@ -18,6 +18,7 @@ class CreateTblTicketsTable extends Migration
             $table->integer('order_id');
             $table->integer('vertoning_id');
             $table->integer('stoel_id');
+            $table->tinyInteger('gebruikt');
             $table->timestamps();
         });
     }
