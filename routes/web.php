@@ -14,9 +14,9 @@
 
 Route::group(['middleware'=>'auth'], function(){
 
-    Route::get('/', function () {
-        return view('dashboard');
-    })->name('home');
+    Route::get('/chairselect', function (){
+        return view('ChairSelect');
+    });
 
 });
 
@@ -25,7 +25,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/agenda', 'AgendaController@index')->name('agenda');
 
 Route::get('/home', 'HomeController@index');
-
+Route::get('/', function () {
+    return view('dashboard');
+})->name('home');
 
 
 if(env('APP_ENV') == 'production')
