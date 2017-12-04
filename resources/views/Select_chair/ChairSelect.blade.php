@@ -5,8 +5,130 @@
 @endsection
 @section ('content')
 
-<div class="seats col-lg-12"></div>
+<div class="seats col-lg-12">
+    <div class="seat" id="NormalSeat">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+    </div><div class="seat" id="NormalSeat">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+    </div><div class="seat" id="NormalSeat">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+    </div>
+    <div class="seat" id="LoveSeat">
+        <img src="img/bioscoop/loveseat.png" alt="">
+        <img src="img/bioscoop/loveseat.png" alt="">
+        <img src="img/bioscoop/loveseat.png" alt="">
+        <img src="img/bioscoop/loveseat.png" alt="">
+        <img src="img/bioscoop/loveseat.png" alt="">
+    </div>
+    <div class="seat" id="LoveSeat">
+        <img src="img/bioscoop/loveseat.png" alt="">
+        <img src="img/bioscoop/loveseat.png" alt="">
+        <img src="img/bioscoop/loveseat.png" alt="">
+        <img src="img/bioscoop/loveseat.png" alt="">
+        <img src="img/bioscoop/loveseat.png" alt="">
+    </div>
+
+    <div class="seat" id="NormalSeat">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+    </div><div class="seat" id="NormalSeat">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+    </div><div class="seat" id="NormalSeat">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+    </div><div class="seat" id="NormalSeat2">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+    </div><div class="seat" id="NormalSeat1">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+        <img src="img/bioscoop/seat.png" alt="">
+    </div>
+
+</div>
+
 <div class="scherm col-lg-12">
     <img src="img/bioscoop/scherm.png" alt="">
 </div>
+
+@endsection
+@section('LeftBar')
+    <div class="left_bar col-lg-12">
+        <h2>Stoel Selector</h2>
+        <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi autem, deleniti dolor doloribus error esse ipsum laboriosam laudantium libero minima modi nulla, quam quis recusandae sint tempora ullam, vitae voluptatibus.</span><span>Magni minus possimus rem suscipit. Inventore minus nisi numquam totam. Atque delectus inventore itaque, iure iusto nemo nihil nisi, nostrum obcaecati odit pariatur placeat, porro quae rerum similique tempore voluptates?</span><span>Animi consequuntur dolore exercitationem inventore itaque nisi nulla possimus quam voluptate.
+               A assumenda at autem consequatur consequuntur dolorem doloremque ea, fugiat ipsum iste laborum minima, nobis, temporibus veniam voluptatum. Eaque?</span></p>
+    </div>
+@endsection
+
+@section('RightBar')
+    <div class="right_bar col-lg-12">
+        <h2>Kiezen</h2>
+    </div>
 @endsection

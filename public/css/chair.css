@@ -2,17 +2,42 @@ h2 {
     color: hotpink;
 }
 .seats {
+
+    margin-top: 20px;
+}
+
+.seat
+{
     display: flex;
     justify-content: center;
-    margin-top: 20px;
-    padding-bottom: 500px;
-    background-color: hotpink;
+}
+#LoveSeat img
+{
+    height: 75px;
+    margin: 0 15px;
+}
+.seat img
+{
+    height: 60px;
 
 }
 .scherm {
     display: flex;
     justify-content: center;
-    padding-bottom: 100px;
+    padding-bottom: 20px;
     transform: rotate(180deg);
-    margin-bottom: 20px;
+}
+.left_bar {
+    background-color: #ffffff;
+    border-right: 1px solid lightgrey;
+    width: 320px;
+    height: 100%;
+}
+.right_bar {
+    display: flex;
+    border-left: 1px solid lightgrey;
+    flex-direction: column;
+    background-color: #ffffff;
+    width: 320px;
+    height: 100%;
 }
