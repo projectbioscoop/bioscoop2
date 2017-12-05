@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTblZalenTable extends Migration
+class CreateTblTimesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,9 @@ class CreateTblZalenTable extends Migration
      */
     public function up()
     {
-        Schema::create('tbl_zalen', function (Blueprint $table) {
+        Schema::create('tbl_times', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('zaal_id');
-            $table->string('naam');
-            $table->integer('capaciteit');
-            $table->integer('per_rij_aantal_stoelen');
+            $table->time('start_time');
             $table->timestamps();
         });
     }
@@ -30,6 +27,6 @@ class CreateTblZalenTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tbl_zalen');
+        Schema::dropIfExists('tbl_times');
     }
 }

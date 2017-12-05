@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTblZRegelsTable extends Migration
+class CreateTblChairsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,14 @@ class CreateTblZRegelsTable extends Migration
      */
     public function up()
     {
-        Schema::create('tbl_z_regels', function (Blueprint $table) {
+        Schema::create('tbl_chairs', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('zaal_id');
-            $table->integer('rij_loveseat');
+            $table->integer('chair_id');
+            $table->integer('theather_id');
+            $table->integer('chairnumber');
+            $table->integer('rownumber');
+            $table->tinyInteger('used');
+            $table->integer('display_id');
             $table->timestamps();
         });
     }
@@ -28,6 +32,6 @@ class CreateTblZRegelsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tbl_z_regels');
+        Schema::dropIfExists('tbl_chairs');
     }
 }
