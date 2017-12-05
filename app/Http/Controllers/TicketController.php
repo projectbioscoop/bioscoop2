@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Ticket;
+use App\tickets;
 use Illuminate\Http\Request;
 
 class TicketController extends Controller
@@ -81,5 +82,16 @@ class TicketController extends Controller
     public function destroy(Ticket $ticket)
     {
         //
+    }
+
+    public function check(Ticket $ticket)
+    {
+        //Compare ticket with database.
+        //If the ticket excists check of its been used.
+        //If not used set as used and return succes message and ticket data.
+        //If it IS used return error message.
+        //If ticket doesnt exist return error message.
+        //Return to the scan ticket page with the correct message and with ticket info if applicable.
+
     }
 }
