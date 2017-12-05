@@ -15,6 +15,12 @@ class CreateTblStoelenTable extends Migration
     {
         Schema::create('tbl_stoelen', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('stoel_id');
+            $table->integer('zaal_id');
+            $table->integer('stoelnummer');
+            $table->integer('rijnummer');
+            $table->tinyInteger('bezet');
+            $table->integer('vertoning_id');
             $table->timestamps();
         });
     }

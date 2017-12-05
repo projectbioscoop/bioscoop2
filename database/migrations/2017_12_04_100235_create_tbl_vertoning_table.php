@@ -15,6 +15,13 @@ class CreateTblVertoningTable extends Migration
     {
         Schema::create('tbl_vertoning', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('vertoning_id');
+            $table->integer('film_id');
+            $table->integer('zaal_id');
+            $table->integer('leeftijd_id');
+            $table->integer('tijdslot_id');
+            $table->date('datum');
+            $table->time('tijd');
             $table->timestamps();
         });
     }
