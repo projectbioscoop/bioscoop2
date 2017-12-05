@@ -19,7 +19,7 @@ class CreateTblTheathersTable extends Migration
             $table->string('name');
             $table->integer('capacity');
             $table->integer('amount_of_chairs_row');
-            $table->integer('amount_of_loverchairs_row');
+            $table->integer('amount_of_loverchairs');
             $table->timestamps();
         });
     }

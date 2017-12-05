@@ -13,27 +13,23 @@ class BioscoopZaalController extends Controller
      */
     public function index($id)
     {
-        // id is film 
-        // kijk welke zaal
-        // haal alle stoellen op
-        // stuur alles door
-        
-        dd(\App\tbl_theather::all());
+        $display = \App\tbl_displays::find($id);
+        $theather = \App\tbl_theather::where("theather_id",$display["theather_id"])->get();
+        $rows = \App\tbl_z_rules::where("theather_id",$display["theather_id"])->get();
+        $chairs = \App\tbl_chairs::where("display_id",$id)->get();
 
         $movieData = [
-            "theatherName" => "name??????",
-            "capacity" => 100,
-            "rowsLoversSeats" => [6, 7],
-            "amountOfChairsPerRow" => 10,
-            "amountOfLoverChairs" => 10,
+            "theatherName" => $theather[0]["name"],
+            "capacity" => $theather[0]["capacity"],
+            "rowsLoversSeats" => $rows,
+            "amountOfChairsPerRow" => $theather[0]["amount_of_chairs_row"],
+            "amountOfLoverChairs" =>  $theather[0]["amount_of_loverchairs"],
             "chairs" => [
-
+                $chairs
             ]
         ];
 
-        dd($movieData);
-
-        return view('Select_chair.ChairSelect');
+        return view('Select_chair.ChairSelect', compact($movieData, "data"));
     }
 
     /**

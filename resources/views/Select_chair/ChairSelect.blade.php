@@ -4,114 +4,14 @@
     <link rel="stylesheet" href="css/chair.css">
 @endsection
 @section ('content')
-
+<h2>{{ $data }}</h2>
 <div class="seats col-lg-12">
     <div class="seat" id="NormalSeat">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-    </div><div class="seat" id="NormalSeat">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-    </div><div class="seat" id="NormalSeat">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
+        
     </div>
     <div class="seat" id="LoveSeat">
-        <img src="img/bioscoop/loveseat.png" alt="">
-        <img src="img/bioscoop/loveseat.png" alt="">
-        <img src="img/bioscoop/loveseat.png" alt="">
-        <img src="img/bioscoop/loveseat.png" alt="">
-        <img src="img/bioscoop/loveseat.png" alt="">
+        
     </div>
-    <div class="seat" id="LoveSeat">
-        <img src="img/bioscoop/loveseat.png" alt="">
-        <img src="img/bioscoop/loveseat.png" alt="">
-        <img src="img/bioscoop/loveseat.png" alt="">
-        <img src="img/bioscoop/loveseat.png" alt="">
-        <img src="img/bioscoop/loveseat.png" alt="">
-    </div>
-
-    <div class="seat" id="NormalSeat">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-    </div><div class="seat" id="NormalSeat">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-    </div><div class="seat" id="NormalSeat">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-    </div><div class="seat" id="NormalSeat2">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-    </div><div class="seat" id="NormalSeat1">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-        <img src="img/bioscoop/seat.png" alt="">
-    </div>
-
 </div>
 
 <div class="scherm col-lg-12">
