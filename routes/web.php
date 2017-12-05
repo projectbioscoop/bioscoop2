@@ -18,9 +18,12 @@ Route::group(['middleware'=>'auth'], function(){
         return view('dashboard');
     })->name('home');
 
+    Route::group(['middleware' => 'admin'], function () {
+
+    });
 });
 
-
+Route::resource('ticket', 'TicketController');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/agenda', 'AgendaController@index')->name('agenda');
 
