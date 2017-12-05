@@ -15,6 +15,9 @@ class CreateTblOrderTable extends Migration
     {
         Schema::create('tbl_order', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('order_id');
+            $table->integer('user_id');
+            $table->integer('ticket_id');
             $table->timestamps();
         });
     }

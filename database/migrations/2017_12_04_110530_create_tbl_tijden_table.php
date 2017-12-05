@@ -15,6 +15,7 @@ class CreateTblTijdenTable extends Migration
     {
         Schema::create('tbl_tijden', function (Blueprint $table) {
             $table->increments('id');
+            $table->time('begin_tijd');
             $table->timestamps();
         });
     }

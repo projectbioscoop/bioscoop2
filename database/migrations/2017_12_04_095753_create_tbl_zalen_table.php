@@ -15,6 +15,10 @@ class CreateTblZalenTable extends Migration
     {
         Schema::create('tbl_zalen', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('zaal_id');
+            $table->string('naam');
+            $table->integer('capaciteit');
+            $table->integer('per_rij_aantal_stoelen');
             $table->timestamps();
         });
     }
