@@ -48,8 +48,13 @@ elseif (env('APP_ENV') == 'local')
 			$user->id = $id;
             $user->email = 'test_Acount@rocwb.nl';
             $user->password = "1234567890";
-            $user->voornaam = "test";
-            
+            $user->firstname = "test";
+            $user->lastname = "ettete";
+            $user->insertion = "";
+            $user->gender = "man";
+            $user->mobileNumber = 1234567;
+            $user->age = 35;
+            $user->role = "admin";
 			$user->save();
 		}
 

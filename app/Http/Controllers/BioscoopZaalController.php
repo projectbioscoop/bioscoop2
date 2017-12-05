@@ -17,6 +17,22 @@ class BioscoopZaalController extends Controller
         // kijk welke zaal
         // haal alle stoellen op
         // stuur alles door
+        
+        dd(\App\tbl_theather::all());
+
+        $movieData = [
+            "theatherName" => "name??????",
+            "capacity" => 100,
+            "rowsLoversSeats" => [6, 7],
+            "amountOfChairsPerRow" => 10,
+            "amountOfLoverChairs" => 10,
+            "chairs" => [
+
+            ]
+        ];
+
+        dd($movieData);
+
         return view('Select_chair.ChairSelect');
     }
 
