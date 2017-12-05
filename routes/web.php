@@ -14,9 +14,7 @@
 
 Route::group(['middleware'=>'auth'], function(){
 
-    Route::get('/chairselect', function (){
-        return view('Select_chair.ChairSelect');
-    });
+    Route::get('/chairselect/{id}', "BioscoopZaalController@index");
 
 });
 
@@ -45,9 +43,10 @@ elseif (env('APP_ENV') == 'local')
 		if(!$user){
 			$user = new \App\User();
 			$user->id = $id;
-			$user->name = "test_Acount";
             $user->email = 'test_Acount@rocwb.nl';
             $user->password = "1234567890";
+            $user->voornaam = "test";
+            
 			$user->save();
 		}
 
