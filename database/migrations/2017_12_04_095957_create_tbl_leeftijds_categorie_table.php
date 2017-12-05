@@ -15,6 +15,8 @@ class CreateTblLeeftijdsCategorieTable extends Migration
     {
         Schema::create('tbl_leeftijds_categorie', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('leeftijd_id');
+            $string->string('categorie');
             $table->timestamps();
         });
     }

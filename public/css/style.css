@@ -196,3 +196,13 @@
 {
 	width: 1000px;
 }
+
+.scan {
+	display: flex;
+	flex-direction: row;
+	justify-content:center;
+	margin: 0 auto;
+}
+.scan form {
+	margin: 100px;
+	}

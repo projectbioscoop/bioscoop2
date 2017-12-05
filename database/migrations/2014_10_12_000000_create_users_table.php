@@ -23,6 +23,7 @@ class CreateUsersTable extends Migration
             $table->string('geslacht');
             $table->integer('mobileNummer');
             $table->integer('leeftijd');
+            $table->string('role');
             $table->rememberToken();
             $table->timestamps();
         });
