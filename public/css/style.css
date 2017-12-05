@@ -189,3 +189,13 @@
 	max-height: 484px;
 	margin-bottom: 25px;
 }
+
+.scan {
+	display: flex;
+	flex-direction: row;
+	justify-content:center;
+	margin: 0 auto;
+}
+.scan form {
+	margin: 100px;
+	}
