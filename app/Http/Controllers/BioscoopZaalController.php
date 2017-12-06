@@ -29,7 +29,7 @@ class BioscoopZaalController extends Controller
             ]
         ];
 
-        return view('Select_chair.ChairSelect', compact($movieData, "data"));
+        return view('Select_chair.ChairSelect', compact("movieData"));
     }
 
     /**

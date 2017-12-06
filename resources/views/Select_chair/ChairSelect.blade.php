@@ -1,10 +1,10 @@
 @extends('master')
 
 @section('links')
-    <link rel="stylesheet" href="css/chair.css">
+    <link rel="stylesheet" href="/css/chair.css">
 @endsection
 @section ('content')
-<h2>{{ $data }}</h2>
+<h2>{{ $movieData["theatherName"] }}</h2>
 <div class="seats col-lg-12">
     <div class="seat" id="NormalSeat">
         
