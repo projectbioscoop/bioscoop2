@@ -17,8 +17,10 @@ class BioscoopZaalController extends Controller
         $theather = \App\tbl_theather::where("theather_id",$display["theather_id"])->get();
         $rows = \App\tbl_z_rules::where("theather_id",$display["theather_id"])->get();
         $chairs = \App\tbl_chairs::where("display_id",$id)->get();
+        $movies = \App\tbl_movies::find($display[0]["movie_id"]);
 
         $movieData = [
+            "movieName" => $movies["movie_title"],
             "theatherName" => $theather[0]["name"],
             "capacity" => $theather[0]["capacity"],
             "rowsLoversSeats" => $rows,
@@ -30,6 +32,42 @@ class BioscoopZaalController extends Controller
         ];
 
         return view('Select_chair.ChairSelect', compact("movieData"));
+    }
+
+    public function indexAdmin()
+    {
+        $data = null;
+        $displays = \App\tbl_displays::all();
+        foreach ($displays as $display)
+        {
+            $theather = \App\tbl_theather::where("theather_id",$display["theather_id"])->get();
+            $rows = \App\tbl_z_rules::where("theather_id",$display["theather_id"])->get();
+            $chairs = \App\tbl_chairs::where("display_id",$display["id"])->get();
+            $movies = \App\tbl_movies::find($display[0]["movie_id"]);
+    
+            $movieData = [
+                "movieName" => $movies["movie_title"],
+                "theatherName" => $theather[0]["name"],
+                "capacity" => $theather[0]["capacity"],
+                "rowsLoversSeats" => $rows,
+                "amountOfChairsPerRow" => $theather[0]["amount_of_chairs_row"],
+                "amountOfLoverChairs" =>  $theather[0]["amount_of_loverchairs"],
+                "chairs" => [
+                    $chairs
+                ]
+            ];
+
+            if ($data == null)
+            {
+                $data = [$movieData];
+            }
+            else
+            {
+                $data = array_merge($data , $movieData);
+            }
+
+            return view('admin.AdminTheatherReview', compact("data"));
+        }
     }
 
     /**

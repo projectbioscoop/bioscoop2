@@ -15,6 +15,7 @@
 Route::group(['middleware'=>'auth'], function(){
 
     Route::get('/chairselect/{id}', "BioscoopZaalController@index");
+    Route::get('/chairselectadmin', "BioscoopZaalController@indexAdmin");
 
     Route::group(['middleware' => 'admin'], function () {
 
