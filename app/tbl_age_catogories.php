@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class vertoningen extends Model
+class tbl_age_catogories extends Model
 {
     //
 }

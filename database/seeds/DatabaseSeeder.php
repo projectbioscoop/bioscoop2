@@ -21,6 +21,9 @@ class DatabaseSeeder extends Seeder
                 'stoel_id'          => $faker->numberBetween(1,30),
                 'gebruikt'          => $faker->randomElement(['1', '0'])
             ]);
+            DB::table('order')->insert([
+
+            ]);
         }
     }
 }
