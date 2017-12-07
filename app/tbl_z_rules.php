@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class orders extends Model
+class tbl_z_rules extends Model
 {
     //
 }

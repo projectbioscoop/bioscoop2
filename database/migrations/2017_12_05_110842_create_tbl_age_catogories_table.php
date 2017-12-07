@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTblTijdenTable extends Migration
+class CreateTblAgeCatogoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,10 @@ class CreateTblTijdenTable extends Migration
      */
     public function up()
     {
-        Schema::create('tbl_tijden', function (Blueprint $table) {
+        Schema::create('tbl_age_catogories', function (Blueprint $table) {
             $table->increments('id');
-            $table->time('begin_tijd');
+            $table->integer('age_id');
+            $table->string('category');
             $table->timestamps();
         });
     }
@@ -27,6 +28,6 @@ class CreateTblTijdenTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tbl_tijden');
+        Schema::dropIfExists('tbl_age_catogories');
     }
 }
