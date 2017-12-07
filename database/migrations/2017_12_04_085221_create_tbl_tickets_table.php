@@ -16,9 +16,9 @@ class CreateTblTicketsTable extends Migration
         Schema::create('tbl_tickets', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('order_id');
-            $table->integer('vertoning_id');
-            $table->integer('stoel_id');
-            $table->tinyInteger('gebruikt');
+            $table->integer('displays_id');
+            $table->integer('chair_id');
+            $table->tinyInteger('used');
             $table->timestamps();
         });
     }
