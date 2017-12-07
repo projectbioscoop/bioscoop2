@@ -17,9 +17,9 @@ class DatabaseSeeder extends Seeder
         {
             DB::table('tbl_tickets')->insert([
                 'order_id'          => $faker->numberBetween(0,1000),
-                'vertoning_id'      => $faker->numberBetween(0,1000),
-                'stoel_id'          => $faker->numberBetween(1,30),
-                'gebruikt'          => $faker->randomElement(['1', '0'])
+                'display_id'      => $faker->numberBetween(0,1000),
+                'chair_id'          => $faker->numberBetween(1,30),
+                'used'          => $faker->randomElement(['1', '0'])
             ]);
         }
     }
