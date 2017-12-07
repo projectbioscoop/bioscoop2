@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTblLeeftijdsCategorieTable extends Migration
+class CreateTblTheathersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,13 @@ class CreateTblLeeftijdsCategorieTable extends Migration
      */
     public function up()
     {
-        Schema::create('tbl_leeftijds_categorie', function (Blueprint $table) {
+        Schema::create('tbl_theathers', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('leeftijd_id');
-            $string->string('categorie');
+            $table->integer('theather_id');
+            $table->string('name');
+            $table->integer('capacity');
+            $table->integer('amount_of_chairs_row');
+            $table->integer('amount_of_loverchairs');
             $table->timestamps();
         });
     }
@@ -28,6 +31,6 @@ class CreateTblLeeftijdsCategorieTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tbl_leeftijds_categorie');
+        Schema::dropIfExists('tbl_theathers');
     }
 }
