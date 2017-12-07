@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class films extends Model
+class tbl_times extends Model
 {
     //
 }
