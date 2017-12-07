@@ -86,6 +86,7 @@ class TicketController extends Controller
 
     public function check(Ticket $ticket)
     {
+        $ticket = Ticket::where();
         //Compare ticket with database.
         //If the ticket excists check of its been used.
         //If not used set as used and return succes message and ticket data.
