@@ -26,17 +26,6 @@ class DatabaseSeeder extends Seeder
                 
             ]);
 
-            DB::table('tbl_chairs')->insert([
-                'chair_id'          => $faker->unique()->numberBetween(0,2002),
-                'theather_id'       => $faker->numberBetween(0,4),
-                'chairnumber'       => $faker->unique()->numberBetween(0,2002),
-                'rownumber'         => $faker->numberBetween(0,30),
-                'used'              => $faker->randomElement((['1', '0'])),
-                'display_id'        => $faker->numberBetween(1,1000),
-                'created_at'        => now(),
-                'updated_at'        => now()
-            ]);
-
             DB::table('tbl_displays')->insert([
                 'display_id'        => $faker->numberBetween(0,1000),
                 'movie_id'          => $faker->numberBetween(0,100),
@@ -74,12 +63,29 @@ class DatabaseSeeder extends Seeder
 
 
         }
+
         for($i = 0; $i <= 3; $i++)
         {
+            $cap = $faker->numberBetween(0,500);
+            $dis = $faker->numberBetween(1,1000);
+            for ($j = 0 ; $j < $cap ; $j++)
+            {
+                DB::table('tbl_chairs')->insert([
+                    'chair_id'          => $j,
+                    'theather_id'       => $i,
+                    'chairnumber'       => $j,
+                    'rownumber'         => $faker->numberBetween(0,30),
+                    'used'              => $faker->randomElement((['1', '0'])),
+                    'display_id'        => $dis,
+                    'created_at'        => now(),
+                    'updated_at'        => now()
+                ]);
+            }
+
             DB::table('tbl_theathers')->insert([
-                'theather_id'       =>$faker->numberBetween(0,3),
+                'theather_id'       =>$i,
                 'name'              =>$faker->name(),
-                'capacity'          =>$faker->numberBetween(0,500),
+                'capacity'          => $cap,
                 'amount_of_chairs_row' =>$faker->numberBetween(4,16),
                 'amount_of_loverchairs' =>$faker->numberBetween(0,16),
                 'created_at'        => now(),
@@ -88,10 +94,17 @@ class DatabaseSeeder extends Seeder
             ]);
 
             DB::table('tbl_z_rules')->insert([
-               'theather_id'        => $faker->numberBetween(0,3),
-               'row_loveseat'       => $faker->numberBetween(0,20),
+               'theather_id'        => $i,
+               'row_loveseat'       => 6,
                'created_at'         => now(),
                'updated_at'         => now()
+            ]);
+
+            DB::table('tbl_z_rules')->insert([
+                'theather_id'        => $i,
+                'row_loveseat'       => 7,
+                'created_at'         => now(),
+                'updated_at'         => now()
             ]);
         }
         for ($i = 0; $i <= 10; $i++){
