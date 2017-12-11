@@ -12,3 +12,7 @@
 @section('content')
 
 @endsection
+
+@section("scripts")
+    <script src="/js/slider.js" type="text/javascript"></script>
+@endsection

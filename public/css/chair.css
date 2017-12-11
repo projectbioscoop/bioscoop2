@@ -1,5 +1,5 @@
 h2 {
-    color: hotpink;
+    color: #777777;
 }
 .seats {
 
@@ -59,16 +59,21 @@ h2 {
 }
 .bar
 {
-    padding: 10px;
+    padding: 10px 20px;
     background-color: #f8f8f8;
     border: 1px solid #e7e7e7;
     margin-top: 20px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     border-radius: 15px;
 }
 footer
 {
     margin-top: 20px; 
+}
+.Arrow
+{
+    width: 75px;
+    margin-right: 20px;
 }

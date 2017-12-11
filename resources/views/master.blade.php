@@ -140,6 +140,8 @@
     {{--Add variable at placeholder Variable will be ticketID from database!!--}}
     <script> JsBarcode("#barcode", "placeholder");</script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-	<script src="js/slider.js" type="text/javascript"></script>
+    @yield("scripts")
+	
+    <script src="/js/main.js"></script>
 </body>
 </html>
