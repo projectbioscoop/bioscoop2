@@ -11,6 +11,11 @@ h2 {
     display: flex;
     justify-content: center;
 }
+.LoveSeat
+{
+    display: flex;
+    justify-content: center;
+}
 
 .seat2
 {
@@ -20,7 +25,7 @@ h2 {
     border-radius: 15px;  
 }
 
-#LoveSeat img
+.LoveSeat img
 {
     height: 75px;
     margin: 0 15px;
@@ -28,7 +33,6 @@ h2 {
 .seat img
 {
     height: 60px;
-
 }
 .scherm {
     display: flex;

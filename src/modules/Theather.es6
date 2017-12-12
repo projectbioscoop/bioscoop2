@@ -14,7 +14,7 @@ export default class Theather
         for (let i = 0; i < this.chairs.length; i++)
         {
             this.chairs[i].addEventListener("mouseover", () => {
-                if (!this.chairs[i].classList.contains("bezet"))
+                if (!this.chairs[i].classList.contains("bezet") && !this.chairs[i].classList.contains("loveSeat"))
                 {    
                     this.colorChangeSeat(this.chairs[i]);
                     this.setSeatCompanion(this.chairs[i]);
@@ -22,7 +22,7 @@ export default class Theather
             });
 
             this.chairs[i].addEventListener("mouseout", () => {
-                if (!this.chairs[i].classList.contains("bezet"))
+                if (!this.chairs[i].classList.contains("bezet") && !this.chairs[i].classList.contains("loveSeat"))
                 {
                     this.colorChangeSeat(this.chairs[i]);
                     this.setSeatCompanion(this.chairs[i]);
@@ -52,11 +52,12 @@ export default class Theather
 
     setSeatCompanion(seat)
     {
-        for (let i = parseInt(seat.id.split("-")[1]) - (this.amountSeats / 2); i < parseInt(seat.id.split("-")[1]) + (this.amountSeats / 2);  i++)
+        console.log(seat);
+        for (let i = Math.floor(parseInt(seat.id.split("-")[1]) - ((this.amountSeats - 1 ) / 2)); i < parseInt(seat.id.split("-")[1]) + (this.amountSeats / 2);  i++)
         {
-            if (seat.id != "seat-" + i)
+            if (seat.id != ("seat-" + i) && i >= 0)
             {
-                if (!this.loveSeats && seat.src.split("000")[1] != "/img/bioscoop/loveseat.png")
+                if (!document.getElementById("seat-" + i).classList.contains("loveSeat"))
                 {
                     if (!document.getElementById("seat-" + i).classList.contains("bezet"))
                     {
