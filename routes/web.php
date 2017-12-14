@@ -12,18 +12,17 @@
 */
 
 
-Route::group(['middleware'=>'auth'], function(){
+Route::group(['middleware'=>'guest'], function(){
 
     Route::get('/', function () {
         return view('dashboard');
     })->name('home');
 
 });
-
-
+Route::get("/moviedetails", "MovieController@index");
+Route::post("moviesearch/{id}", "MovieController@show");
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/agenda', 'AgendaController@index')->name('agenda');
-
 Route::get('/home', 'HomeController@index');
 
 
