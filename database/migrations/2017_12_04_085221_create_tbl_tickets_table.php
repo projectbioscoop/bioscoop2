@@ -19,6 +19,7 @@ class CreateTblTicketsTable extends Migration
             $table->integer('display_id');
             $table->integer('chair_id');
             $table->tinyInteger('used');
+            $table->integer('barcode');
             $table->timestamps();
         });
     }
