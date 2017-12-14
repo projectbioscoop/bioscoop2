@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\tbl_tickets;
 use App\Ticket;
 use App\tickets;
 use Illuminate\Http\Request;
@@ -70,7 +71,7 @@ class TicketController extends Controller
      */
     public function update(Request $request, Ticket $ticket)
     {
-        //
+
     }
 
     /**
@@ -84,9 +85,29 @@ class TicketController extends Controller
         //
     }
 
-    public function check(Ticket $ticket)
+    public function check(Request $request)
     {
-        $ticket = Ticket::where();
+
+//        dd($request->barcode);
+        $barcode = $request->barcode;
+        if (tbl_tickets::where('barcode','=',$barcode)->count()){
+            $ticket = tbl_tickets::where('barcode','=',$barcode)->first();
+            if ($ticket->used){
+                return redirect('ticket');
+            }
+            else{
+                $ticket->used = 1;
+                $ticket->save();
+                return redirect('ticket');
+            }
+        }
+        else{
+            echo "false";
+        }
+//        $check =  tbl_tickets::where('barcode','=',$barcode)->count();
+//        dd($check);
+
+//        $ticket = tbl_tickets::where();
         //Compare ticket with database.
         //If the ticket excists check of its been used.
         //If not used set as used and return succes message and ticket data.

@@ -206,3 +206,14 @@
 .scan form {
 	margin: 100px;
 	}
+
+.ticketmessage {
+	display: flex;
+	flex-direction: row;
+	justify-content:center;
+	margin: 0 auto;
+}
+
+.ticketmessage {
+	list-style-type: none;
+}

@@ -21,7 +21,7 @@ Route::group(['middleware'=>'auth'], function(){
 
     });
 });
-
+Route::post('/scanticket', 'TicketController@check');
 Route::resource('ticket', 'TicketController');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/agenda', 'AgendaController@index')->name('agenda');
