@@ -17,6 +17,6 @@ class Admin
         {
             return $next($request);
         }
-        return redirect()->route('home');
+        return view('ErrorPages.403');
     }
 }
