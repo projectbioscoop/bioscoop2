@@ -31,7 +31,7 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/paymentcomplete', 'PaymentController@index');
-Route::get('/', function () {
+Route::get('/payment', function () {
     return view('PaymentComplete.PaymentComplete');
 })->name('PaymentComplete');
 
