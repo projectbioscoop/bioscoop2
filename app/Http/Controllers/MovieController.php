@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
 
 class MovieController extends Controller
 {
@@ -43,12 +44,13 @@ class MovieController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        $id = $_POST["id"];
-        $id = urlencode($id);
-        $html = file_get_contents("http://www.omdbapi.com/?apikey=31d16dc7&i=".$id."&plot=full");
-        return view("moviereturn", compact("html"));
+        $userId = \Auth::User()->id;
+        $filmid = $_POST["id"];
+        $filmid = urlencode($filmid);
+        $data = file_get_contents("http://www.omdbapi.com/?apikey=31d16dc7&i=".$filmid."&plot=full");
+        return view("moviereturn", compact("data"));
     }
 
     /**

@@ -12,16 +12,17 @@
 */
 
 
-Route::group(['middleware'=>'guest'], function(){
+Route::group(['middleware'=>'auth'], function(){
 
     Route::get('/chairselect/{id}', "BioscoopZaalController@index");
     Route::get('/chairselectadmin', "BioscoopZaalController@indexAdmin");
+    Route::get("/moviedetails", "MovieController@index");
+    Route::post("/moviereturn", "MovieController@show");
+
     Route::group(['middleware' => 'admin'], function () {
 
     });
 });
-Route::get("/moviedetails", "MovieController@index");
-Route::post("moviesearch/{id}", "MovieController@show");
 
 Route::resource('ticket', 'TicketController');
 Route::get('/home', 'HomeController@index')->name('home');

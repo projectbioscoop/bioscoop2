@@ -7,5 +7,5 @@
     //     echo $filminfo;
     //     echo "<br>";
     // }
-    echo $html;
+    echo $data;
 ?> 
