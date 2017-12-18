@@ -26,12 +26,13 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/agenda', 'AgendaController@index')->name('agenda');
 
 Route::get('/home', 'HomeController@index');
+
 Route::get('/', function () {
     return view('dashboard');
 })->name('home');
 
 Route::get('/paymentcomplete', 'PaymentController@index');
-Route::get('/', function () {
+Route::get('/payment', function () {
     return view('PaymentComplete.PaymentComplete');
 })->name('PaymentComplete');
 
@@ -65,7 +66,6 @@ elseif (env('APP_ENV') == 'local')
 
         \Auth::login($user);
 		return redirect()->route('home');
-    
     })->name('login');
 
 	Route::get('logout', function(){
