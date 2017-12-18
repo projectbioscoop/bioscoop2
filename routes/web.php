@@ -32,7 +32,7 @@ Route::get('/', function () {
 
 Route::get('/paymentcomplete', 'PaymentController@index');
 Route::get('/', function () {
-    return view('PaymentComplete');
+    return view('PaymentComplete.PaymentComplete');
 })->name('PaymentComplete');
 
 
