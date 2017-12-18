@@ -204,7 +204,7 @@
 	margin: 0 auto;
 }
 .scan form {
-	margin: 100px;
+	margin: 50px;
 	}
 
 .ticketmessage {
@@ -216,4 +216,5 @@
 
 .ticketmessage {
 	list-style-type: none;
+	padding: 50px;
 }

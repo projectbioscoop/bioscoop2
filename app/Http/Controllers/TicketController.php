@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\tbl_displays;
 use App\tbl_tickets;
 use App\Ticket;
 use App\tickets;
@@ -93,16 +94,17 @@ class TicketController extends Controller
         if (tbl_tickets::where('barcode','=',$barcode)->count()){
             $ticket = tbl_tickets::where('barcode','=',$barcode)->first();
             if ($ticket->used){
-                return redirect('ticket');
+                return back()->with('used', 'Ticket is al eerder gebruikt.');
             }
             else{
+                $display = tbl_displays::where('display_id', '=', $ticket->display_id)->first();
                 $ticket->used = 1;
                 $ticket->save();
-                return redirect('ticket');
+                return back()->with('succes', 'Ticket is valide.');
             }
         }
         else{
-            echo "false";
+            return back()->with('used', 'Ticket bestaat niet!');
         }
 //        $check =  tbl_tickets::where('barcode','=',$barcode)->count();
 //        dd($check);
