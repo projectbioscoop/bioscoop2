@@ -88,7 +88,7 @@ if (locationArray[0] == "http:" && locationArray[1] == "")
             break;
         case "chairselect":
             new __WEBPACK_IMPORTED_MODULE_1__modules_Theather_es6__["a" /* default */]({
-                "amountSeats" : 10,
+                "amountSeats" : 5,
                 "loveSeats" : false
             });
             break;
@@ -141,6 +141,7 @@ class Theather
     constructor(options)
     {
         this.chairs;
+        this.selected;
         this.amountSeats = options.amountSeats;
         this.loveSeats = options.loveSeats;
         this.HoverEvent()
@@ -169,6 +170,13 @@ class Theather
         }
     }
 
+    ClickEvent()
+    {
+        document.getElementsByClassName("chair").addEventListener("click", ()=>{
+            fetch("google.com/"+this.selected);//url
+        });
+    }
+
     colorChangeSeat(seat)
     {
         switch(seat.src.split("000")[1])
@@ -190,8 +198,10 @@ class Theather
 
     setSeatCompanion(seat)
     {
-        console.log(seat);
-        for (let i = Math.floor(parseInt(seat.id.split("-")[1]) - ((this.amountSeats - 1 ) / 2)); i < parseInt(seat.id.split("-")[1]) + (this.amountSeats / 2);  i++)
+        let amountSeatsMin = Math.floor(parseInt(seat.id.split("-")[1]) - ((this.amountSeats - 1 ) / 2));
+        (amountSeatsMin < 0 ? amountSeatsMin = 0 : null );
+        let amountSeatsMax = parseInt(seat.id.split("-")[1]) + (this.amountSeats / 2);
+        for (let i = amountSeatsMin; i < amountSeatsMax;  i++)
         {
             if (seat.id != ("seat-" + i) && i >= 0)
             {
@@ -199,16 +209,18 @@ class Theather
                 {
                     if (!document.getElementById("seat-" + i).classList.contains("bezet"))
                     {
-                        this.colorChangeSeat(document.getElementById("seat-" + i));                        
+                        this.colorChangeSeat(document.getElementById("seat-" + i));
                     }
                     else
                     {
-                        this.colorChangeSeat(document.getElementById("seat-" + parseInt(seat.id.split("-")[1]) + (this.amountSeats / 2) + 1)); 
-                    }
+                        amountSeatsMax++;
+                    }   
                 }
             }
         }
     }
+
+    
 }
 /* harmony export (immutable) */ __webpack_exports__["a"] = Theather;
 
