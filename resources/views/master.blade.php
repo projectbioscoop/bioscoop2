@@ -1,11 +1,12 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>Bioscoop</title>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="/css/style.css">
+    @yield('links')
 </head>
 <body>
     <header>
@@ -44,9 +45,19 @@
         </nav> 
     </header> 
 	
-	<div class="container">
-		@yield('content')
-	</div>
+    <div class="globalWrapper">
+        <div class="sesionLeft">
+            @yield('LeftBar')
+        </div>
+        <div class="container">
+            @yield('content')
+        </div>
+        <div class="sesionRight">
+            @yield('RightBar')
+        </div>
+    </div>
+
+	
 
 	<div class="hero-img">
 		@yield('hero-content')
@@ -125,7 +136,10 @@
     </div>
     <!--/.footer-bottom--> 
 </footer>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/jsbarcode/3.6.0/JsBarcode.all.min.js"> </script>
+    {{--Add variable at placeholder Variable will be ticketID from database!!--}}
+    <script> JsBarcode("#barcode", "placeholder");</script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 	<script src="js/slider.js" type="text/javascript"></script>
 </body>
 </html>
