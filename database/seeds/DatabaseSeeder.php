@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $faker = Faker\Factory::create();
-        // maak admin
+        
         $id = 1;
         $user               = new \App\User();
         $user->id           = $id;
@@ -28,10 +28,6 @@ class DatabaseSeeder extends Seeder
         $user->role         = "admin";
         $user->save();
             
-        // maak zallen
-
-        //  \\  loverzettels
-        
         $rooms = [
             [
                 "id"    =>  1           ,
@@ -82,7 +78,6 @@ class DatabaseSeeder extends Seeder
             
         }
 
-        // maak films
         $amountMovies = 20;
 
         for ($i = 0;$i < $amountMovies;$i++)
@@ -96,8 +91,6 @@ class DatabaseSeeder extends Seeder
             $movie->requirements        = $faker->sentence;
             $movie->save();
         }
-
-        // maak age catgories
 
         $ageCats = [
             ["iedereen   |   0+"    , 0 ],
@@ -115,8 +108,6 @@ class DatabaseSeeder extends Seeder
             $age_cat->save();
         }
 
-        // maak tijden table
-
         $startersTimes = [
             "15:00",
             "18:00",
@@ -130,16 +121,6 @@ class DatabaseSeeder extends Seeder
             $time->start_time   = $starterTime;
             $time->save();
         }
-
-        // maak displays
-
-        //  \\  maak per display met de gegevens zallen zettels
-
-        //  \\  maak per display een paar boekingen
-
-        //  ||  \\  order
-        //  ||  \\  tickets
-        //  ||  \\  maak users
 
         for ($i = 1;$i<11;$i++)
         {
