@@ -17,15 +17,12 @@ Route::group(['middleware'=>'auth'], function(){
     Route::get('/chairselect/{id}', "BioscoopZaalController@index");
     Route::get('/chairselectadmin', "BioscoopZaalController@indexAdmin");
     Route::group(['middleware' => 'admin'], function () {
-
+        Route::get('/agenda', 'AgendaController@index')->name('agenda');
+        
     });
 });
 
 Route::resource('ticket', 'TicketController');
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/agenda', 'AgendaController@index')->name('agenda');
-
-Route::get('/home', 'HomeController@index');
 
 Route::get('/', function () {
     return view('dashboard');
