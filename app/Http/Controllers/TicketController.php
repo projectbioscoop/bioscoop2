@@ -97,10 +97,13 @@ class TicketController extends Controller
                 return back()->with('used', 'Ticket is al eerder gebruikt.');
             }
             else{
-                $display = tbl_displays::where('display_id', '=', $ticket->display_id)->first();
+                $display = tbl_tickets::find($ticket->id)->display()->first();
+                $movie = tbl_displays::find($ticket->id)->movie()->first();
+                $age = tbl_displays::find($ticket->id)->age()->first();
+                $succes = [$display, $movie, $age,"Ticket is Valide"];
                 $ticket->used = 1;
                 $ticket->save();
-                return back()->with('succes', 'Ticket is valide.');
+                return back()->with('succes', $succes);
             }
         }
         else{
