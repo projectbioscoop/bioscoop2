@@ -34,6 +34,12 @@ Route::get('/payment', function () {
 })->name('PaymentComplete');
 
 
+Route::get('/payTicket', 'PayTicketController@index');
+Route::get('/payTicket', function () {
+    return view('Payment.payTicket');
+})->name('payTicket');
+
+
 if(env('APP_ENV') == 'production')
 {
     Auth::routes();
