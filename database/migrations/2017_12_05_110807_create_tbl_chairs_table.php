@@ -14,8 +14,7 @@ class CreateTblChairsTable extends Migration
     public function up()
     {
         Schema::create('tbl_chairs', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('chair_id');
+            $table->increments('chair_id');
             $table->integer('theather_id');
             $table->integer('chairnumber');
             $table->integer('rownumber');
