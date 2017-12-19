@@ -21,7 +21,7 @@ Route::group(['middleware'=>'auth'], function(){
         
     });
 });
-
+Route::post('/scanticket', 'TicketController@check');
 Route::resource('ticket', 'TicketController');
 
 Route::get('/', function () {
