@@ -14,18 +14,30 @@
 
 Route::group(['middleware'=>'auth'], function(){
 
-    Route::get('/', function () {
-        return view('dashboard');
-    })->name('home');
-
+    Route::get('/chairselect/{id}', "BioscoopZaalController@index");
+    Route::get('/chairselectadmin', "BioscoopZaalController@indexAdmin");
+    Route::group(['middleware' => 'admin'], function () {
+        Route::get('/agenda', 'AgendaController@index')->name('agenda');
+        
+    });
 });
+Route::post('/scanticket', 'TicketController@check');
+Route::resource('ticket', 'TicketController');
+
+Route::get('/', function () {
+    return view('dashboard');
+})->name('home');
+
+Route::get('/paymentcomplete', 'PaymentController@index');
+Route::get('/payment', function () {
+    return view('PaymentComplete.PaymentComplete');
+})->name('PaymentComplete');
 
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/agenda', 'AgendaController@index')->name('agenda');
-
-Route::get('/home', 'HomeController@index');
-
+Route::get('/payTicket', 'PayTicketController@index');
+Route::get('/payTicket', function () {
+    return view('Payment.payTicket');
+})->name('payTicket');
 
 
 if(env('APP_ENV') == 'production')
@@ -43,15 +55,20 @@ elseif (env('APP_ENV') == 'local')
 		if(!$user){
 			$user = new \App\User();
 			$user->id = $id;
-			$user->name = "test_Acount";
             $user->email = 'test_Acount@rocwb.nl';
             $user->password = "1234567890";
+            $user->firstname = "test";
+            $user->lastname = "ettete";
+            $user->insertion = "";
+            $user->gender = "man";
+            $user->mobileNumber = 1234567;
+            $user->age = 35;
+            $user->role = "admin";
 			$user->save();
 		}
 
         \Auth::login($user);
 		return redirect()->route('home');
-    
     })->name('login');
 
 	Route::get('logout', function(){
