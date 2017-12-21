@@ -134,6 +134,9 @@
 	font-size: 1.5em;	
 }
 /* slide show slogan */
+.hero-img {
+	max-height: 540px;
+}
 .mySlides {
 	display: none;
 	margin: 0 auto;
@@ -186,23 +189,3 @@
 	max-height: 484px;
 	margin-bottom: 25px;
 }
-.globalWrapper
-{
-	display: flex;
-	justify-content: space-between;
-	width: 100%;
-}
-.container
-{
-	width: 1000px;
-}
-
-.scan {
-	display: flex;
-	flex-direction: row;
-	justify-content:center;
-	margin: 0 auto;
-}
-.scan form {
-	margin: 100px;
-	}
