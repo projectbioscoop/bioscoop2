@@ -43,10 +43,11 @@ class BioscoopZaalController extends Controller
             $theather = \App\tbl_theather::where("theather_id",$display["theather_id"])->get();
             $rows = \App\tbl_z_rules::where("theather_id",$display["theather_id"])->get();
             $chairs = \App\tbl_chairs::where("display_id",$display["id"])->get();
-            $movies = \App\tbl_movies::find($display[0]["movie_id"]);
-    
+            $movies = \App\tbl_movies::find($display["movie_id"]);
+
             $movieData = [
                 "movieName" => $movies["movie_title"],
+                "movieTime" => $display["date"] . "/" . $display["time"],
                 "theatherName" => $theather[0]["name"],
                 "capacity" => $theather[0]["capacity"],
                 "rowsLoversSeats" => $rows,
