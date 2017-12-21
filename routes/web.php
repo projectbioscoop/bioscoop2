@@ -18,6 +18,7 @@ Route::group(['middleware'=>'auth'], function(){
     Route::get('/chairselectadmin', "BioscoopZaalController@indexAdmin");
     Route::get("/moviedetails", "MovieController@index");
     Route::post("/moviereturn", "MovieController@show");
+    Route::post("/savemovie", "MovieController@store");
 
     Route::group(['middleware' => 'admin'], function () {
 
