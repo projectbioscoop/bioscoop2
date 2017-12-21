@@ -34,7 +34,7 @@ class PayTicketController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**
