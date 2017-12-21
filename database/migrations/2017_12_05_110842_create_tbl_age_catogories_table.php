@@ -15,7 +15,7 @@ class CreateTblAgeCatogoriesTable extends Migration
     {
         Schema::create('tbl_age_catogories', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('age_id');
+            $table->integer('age');
             $table->string('category');
             $table->timestamps();
         });

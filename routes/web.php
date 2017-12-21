@@ -21,14 +21,12 @@ Route::group(['middleware'=>'auth'], function(){
     Route::post("/savemovie", "MovieController@store");
 
     Route::group(['middleware' => 'admin'], function () {
-
+        Route::get('/agenda', 'AgendaController@index')->name('agenda');
+        
     });
 });
-
+Route::post('/scanticket', 'TicketController@check');
 Route::resource('ticket', 'TicketController');
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/agenda', 'AgendaController@index')->name('agenda');
-Route::get('/home', 'HomeController@index');
 
 Route::get('/', function () {
     return view('dashboard');
@@ -38,6 +36,12 @@ Route::get('/paymentcomplete', 'PaymentController@index');
 Route::get('/payment', function () {
     return view('PaymentComplete.PaymentComplete');
 })->name('PaymentComplete');
+
+
+Route::get('/payTicket', 'PayTicketController@index');
+Route::get('/payTicket', function () {
+    return view('Payment.payTicket');
+})->name('payTicket');
 
 
 if(env('APP_ENV') == 'production')
